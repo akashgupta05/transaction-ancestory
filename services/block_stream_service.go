@@ -122,12 +122,3 @@ func (bss *BlockStreamService) calculateCount(transactions []*models.Transaction
 
 	return ancestorsCount
 }
-
-func findTransactionByID(transactions []*models.Transaction, txid string) *models.Transaction {
-	for _, tx := range transactions {
-		if tx.Txid == txid {
-			return tx
-		}
-	}
-	return &models.Transaction{}
-}
